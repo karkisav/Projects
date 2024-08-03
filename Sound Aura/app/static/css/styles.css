@@ -1,0 +1,239 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #1a1a1a;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+#themeToggle:hover {
+    color: var(--accent-color);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.cover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: start;
+    flex: 1;
+    order: 2;
+}
+
+.cover-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.text-container {
+    flex: 1;
+    margin-left: 20px;
+    order: 1;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .cover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        margin-right: 0;
+        margin-top: 20px;
+        order: 2;
+    }
+
+    .cover-grid img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .text-container {
+        margin-left: 0;
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-grid {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        margin-top: 10px;
+    }
+
+    .cover-grid img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.mood-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mood-input input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#addToSpotifyBtn {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addToSpotifyBtn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .mood-input {
+        flex-wrap: wrap;
+    }
+
+    .mood-input input {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        flex-basis: calc(50% - 5px);
+        padding: 10px;
+    }
+
+    #addToSpotifyBtn .button-text {
+        display: none;
+    }
+
+    #addToSpotifyBtn .button-icon {
+        display: inline;
+    }
+}
+
+@media (min-width: 769px) {
+    #addToSpotifyBtn .button-text {
+        display: inline;
+    }
+
+    #addToSpotifyBtn .button-icon {
+        display: none;
+    }
+}
+
+/* Apply the font to headings and important text */
+h1, h2, h3, .important-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#saveToSpotifyBtn {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#saveToSpotifyBtn:hover {
+    background-color: #1ed760;
+}
