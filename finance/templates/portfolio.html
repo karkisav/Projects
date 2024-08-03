@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="table-responsive-md">
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Shares</th>
+                    <th>Purchase Price</th>
+                    <th>Current Price</th>
+                    <th>Purchase Total</th>
+                    <th>Current Total</th>
+                    <th>Gain/Loss</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    <tr>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ usd(stock.purchase_price) }}</td>
+                        <td>{{ usd(stock.current_price) }}</td>
+                        <td>{{ usd(stock.purchase_total) }}</td>
+                        <td>{{ usd(stock.current_total) }}</td>
+                        <td class="{{ 'text-success' if stock.gain_loss > 0 else 'text-danger' }}">
+                            {{ usd(stock.gain_loss) }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="5">Cash</td>
+                    <td>{{ usd(cash) }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="5"><strong>Total</strong></td>
+                    <td><strong>{{ usd(grand_total) }}</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

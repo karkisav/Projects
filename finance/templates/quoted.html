@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+    A  share price of {{ symbol }}({{ symbol }}) is priced at {{ usd(price) }} !
+
+{% endblock %}
