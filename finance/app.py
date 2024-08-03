@@ -341,3 +341,6 @@ def change_password():
                    generate_password_hash(new_pass), session['user_id'])
         flash("Password successfully changed!")
         return redirect("/")
+    
+    if __name__ == "__main__":
+    app.run()
