@@ -342,5 +342,5 @@ def change_password():
         flash("Password successfully changed!")
         return redirect("/")
     
-    if __name__ == "__main__":
-    app.run()
+if __name__ == "__main__":
+app.run()
