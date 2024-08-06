@@ -23,11 +23,11 @@ Open the `.env` file and add the following content:
 
 env
 
-FLASK_APP=run.py
-FLASK_ENV=development
-SPOTIFY_CLIENT_ID=xxxxx
-SPOTIFY_CLIENT_SECRET=xxxxx
-Replace xxxxx with your actual Spotify API credentials.
+`FLASK_APP=run.py`
+`FLASK_ENV=development`
+`SPOTIFY_CLIENT_ID=xxxxx`
+`SPOTIFY_CLIENT_SECRET=xxxxx`
+`Replace xxxxx with your actual Spotify API credentials.`
 
 ## 🔑 Spotify API Credentials
 To obtain the necessary Spotify API credentials:
@@ -42,13 +42,10 @@ After completing the setup, you can run the application using one of the followi
 
 Option 1: Using Flask
 
-bash
-Copy code
+
 flask run
 Option 2: Using Python
 
-bash
-Copy code
 python3 run.py
 Your web application should now be up and running! Open a web browser and navigate to http://localhost:5000 (or the address provided in the terminal) to start using Sound Aura.
 
