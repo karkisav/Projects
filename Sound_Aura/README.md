@@ -40,13 +40,12 @@ Copy these values into your .env file.
 ## ▶️ Running the Application
 After completing the setup, you can run the application using one of the following methods:
 
-Option 1: Using Flask
+### Option 1: Using Flask
 
+`flask run`
+### Option 2: Using Python
 
-flask run
-Option 2: Using Python
-
-python3 run.py
+`python3 run.py`
 Your web application should now be up and running! Open a web browser and navigate to http://localhost:5000 (or the address provided in the terminal) to start using Sound Aura.
 
 This enhanced README.md should now be more visually appealing and easier to follow!
