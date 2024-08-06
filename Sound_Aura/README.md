@@ -28,7 +28,7 @@ env
 `SPOTIFY_CLIENT_ID=xxxxx`
 `SPOTIFY_CLIENT_SECRET=xxxxx`
 `Replace xxxxx with your actual Spotify API credentials.`
-
+`SPOTIFY_REDIRECT_URI='http://127.0.0.1:5000/callback`
 ## 🔑 Spotify API Credentials
 To obtain the necessary Spotify API credentials:
 
