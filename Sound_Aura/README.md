@@ -12,7 +12,7 @@ Open a terminal and navigate to the project folder:
 Activate the virtual environment:
 
 `source venv/bin/activate`
-Install the required dependen
+Install the required depe
 
 
 `pip install -r requirements.txt`
