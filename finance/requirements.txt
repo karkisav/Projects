@@ -4,3 +4,4 @@ flask
 Flask-Session
 pytz
 requests
+gunicorn
